@@ -1,0 +1,181 @@
+/* comment syntax for css
+
+/* CSS centring Code with the h1 "*" */
+
+
+img {
+  border-radius: 8px;
+  height: 400px;
+  width: 400px;
+
+}
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  color: black;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading */
+}
+
+p{
+  text-align: center;
+}
+.container {
+  text-align: center; /* Centers the image horizontally */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px); /* Adjust height to account for footer */
+  background-color: #000;
+  overflow: hidden;
+}
+
+.container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without losing aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Adds a subtle shadow */
+}
+
+footer {
+  background-color: #000; /* Dark background to match the theme */
+  color: #fff; /* White text color */
+  text-align: center; /* Center-align the text */
+  padding: 20px 0; /* Add some padding for spacing */
+  font-family: Arial, sans-serif; /* Use a clean, readable font */
+  font-size: 14px; /* Adjust the font size as needed */
+  width: 100%; /* Full width */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
+  position: relative; /* change to relative positioning */
+  z-index: 1; /* Ensure footer stays below oter content if needed */
+}
+
+
+
+/* General styling */
+
+body {
+  background-color: #f4f4f4;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ 
+
+
+/* General Reset */
+body, html {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styling */
+.navbar {
+  background-color: transparent; /* Transparent background */
+  padding: 20px 0; /* Space around navigation */
+  text-align: center;
+  position: relative; /* Ensures it stays at the top but doesn't follow scroll */
+  width: 100%; 
+  z-index: 1000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.nav-list {
+list-style: none; /* Remove default list styling */
+margin: 0;
+padding: 0;
+display: flex; /* Flexbox layout */
+justify-content: center; /* Center items */
+gap: 40px; /* Spacing between links */
+}
+
+.nav-list a {
+text-decoration: none; /* Remove underline */
+color: black; /* black text color */
+font-size: 18px; /* Adjust font size */
+font-weight: bold;
+letter-spacing: 2px; /* Add spacing between letters */
+transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-list a:hover {
+color: #f39c12; /* Change color on hover */
+}
+
+main {
+margin-top: 100px; /* Adjust this value if needed */
+}
+
+/* General reset for better alignment */
+body, html {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Ensure the logo is properly positioned */
+.logo-link {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1001;
+  padding: 0px;
+  margin: 0px;
+}
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Keeps aspect ratio */
+  transition: opacity 0.3s ease-in-out; /* Smooth hover effect */
+  border-radius: 10px; /* Adjust to match original shape */
+}
+
+
+.logo:hover {
+  opacity: 0.7; /* Slight transparency on hover */
+}
+
+/* =========================== */
+/* Mobile-Specific Adjustments */
+/* =========================== */
+@media (max-width: 768px) {
+  /* Adjust heading size */
+  h1 {
+      font-size: 2rem;
+      margin-top: 60px;
+  }
+
+  /* Reduce paragraph text size */
+  p {
+      font-size: 1rem;
+      padding: 0 15px;
+  }
+
+  /* Resize images for smaller screens */
+  .container img {
+      width: 90%;
+      height: auto;
+  }
+
+  /* Stack navigation items vertically if needed */
+  .nav-list {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  /* Adjust footer padding */
+  footer {
+      padding: 10px 0;
+      font-size: 12px;
+  }
+}

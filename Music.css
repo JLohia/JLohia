@@ -1,0 +1,250 @@
+/* comment syntax for css
+
+
+/* General styling */
+
+h1 {
+  text-align: center;
+}
+
+img {
+  border-radius: 8px;
+  height: 400px;
+  width: 400px;
+}
+
+
+/* General styling */
+
+body {
+background-color: #f4f4f4;
+ color: #333;
+}
+ 
+ h1 {
+  font-size: 2.5rem;
+   color: black;
+   text-align: center;
+   margin-top: 50px; /* Reduce this value to move it higher */
+   margin-bottom: 20px;
+ }
+ 
+ h2 {
+  color: black;
+  margin-top: 50px; /* Adjust the value as needed */
+ }
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Navigation bar styling */
+.navbar {
+background-color: transparent; /* Transparent background */
+padding: 20px 0; /* Space around the navigation */
+text-align: center; /* Center content */
+position: fixed; /* Stick to the top */
+width: 100%; /* Full width */
+z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.nav-list {
+list-style: none; /* Remove default list styling */
+margin: 0;
+padding: 0;
+display: flex; /* Flexbox layout */
+justify-content: center; /* Center items */
+gap: 40px; /* Spacing between links */
+}
+
+.nav-list a {
+text-decoration: none; /* Remove underline */
+color: black; /* black text color */
+font-size: 18px; /* Adjust font size */
+font-weight: bold;
+letter-spacing: 2px; /* Add spacing between letters */
+transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-list a:hover {
+color: #f39c12; /* Change color on hover */
+}
+
+
+/* Ensure full-page layout */
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+}
+
+/* Main content pushes footer down */
+main { 
+  flex: 1; /* Expands to pushe footer down */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+
+/* Footer Styling */
+footer {
+  background-color: #000; /* Dark background */
+  color: #fff; /* White text */
+  text-align: center; /* Center-align text */
+  padding: 10px 0; /* Reduced padding from 20px to 10px */
+  width: 100vw; /* Ensures full viewport width */
+  display: flex;
+  justify-content: center; /* Centers footer content */
+  align-items: center; 
+  position: relative; /* Ensures footer stays at the bottom */
+  bottom: 0;
+  left: 0;
+  font-size: 14px; /* Adjust the font size as needed */
+  font-family: Arial, sans-serif; /* Use a clean, readable font */
+ }
+
+
+/* Ensure the logo is properly positioned */
+.logo-link {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1001;
+  padding: 0px;
+  margin: 0px;
+}
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Keeps aspect ratio */
+  transition: opacity 0.3s ease-in-out; /* Smooth hover effect */
+  border-radius: 10px; /* Adjust to match original shape */
+}
+
+.logo:hover {
+  opacity: 0.7; /* Slight transparency on hover */
+}
+
+/* Container for the music items */
+.music-container {
+  display: flex; /* Arrange items in a row */
+  justify-content: center; /* center the items */
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Add Space between items */
+  margin: 50px 20px; /* Add some margin around the container */
+}
+
+/* Individual muisc items */
+.music-item {
+  text-align: center; /* Center the text below each image */
+}
+
+/* Album cover styling */
+.music-item img {
+  width: 200px; /* Adjust the size of the album covers */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 10px; /* Optional: round the corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+  transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+/* Text below album covers */
+.music-item p {
+  font-size: 18px; 
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333; /* Text color */
+}
+
+/* Styling for the "Listen" buttons */
+.music-item a {
+  display: inline-block; /* Makes the anchor look like a button */
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: black; /* Button text color */
+  color: white; /*Button text color */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none; /* Remove the underline */ 
+  border-radius: 5px; /* Round corners */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Hover effect for buttons */
+.music-item a:hover {
+  background-color: black; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightyly enlarge button /*
+}
+
+/* Hover effect for images */
+.music-item img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* =========================== */
+/* Mobile-Specific Adjustments */
+/* =========================== */
+@media (max-width: 768px) {
+  /* Adjust heading size for mobile */
+  h1 {
+      font-size: 2rem;
+      margin-top: 40px;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  /* Adjust paragraph text size */
+  p {
+      font-size: 1rem;
+      padding: 0 15px;
+  }
+
+  /* Stack music items vertically for better spacing */
+  .music-container {
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+  }
+
+  /* Resize album images */
+  .music-item img {
+      width: 90%;
+      max-width: 250px;
+  }
+
+  /* Adjust listen button */
+  .music-item a {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+
+  /* Stack navigation items vertically if needed */
+  .nav-list {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .nav-list a {
+      font-size: 16px;
+  }
+
+  /* Adjust footer padding */
+  footer {
+      padding: 10px 0;
+      font-size: 12px;
+  }
+}
+
+
+
